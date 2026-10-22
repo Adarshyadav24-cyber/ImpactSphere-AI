@@ -78,6 +78,10 @@ The debug APK is `app\build\outputs\apk\debug\app-debug.apk`. A release APK is u
 
 Every push to `master` runs [`.github/workflows/android.yml`](.github/workflows/android.yml). When the workflow succeeds, open the repository's **Actions** tab, open the **Android APK** run, and download the `impactsphere-firetv-debug-apk` artifact. This is a debug APK for sideloading and device testing, not a signed Appstore release.
 
+### Hosted web preview
+
+Every push to `master` also runs [`.github/workflows/pages.yml`](.github/workflows/pages.yml), which publishes the bundled interface to GitHub Pages at `https://adarshyadav24-cyber.github.io/ImpactSphere-AI/`. The hosted page is a browser preview with local demo data; it is not a Fire TV app installation or Fire TV compatibility test.
+
 ### 3. Install on a Fire TV device
 
 On the Fire TV, enable **ADB Debugging** and **Install unknown apps** under Developer Options. Find the device IP in network settings. Ensure the PC and TV are on the same network, then run (replace the sample IP):
