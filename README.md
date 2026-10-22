@@ -74,6 +74,10 @@ gradle assembleRelease
 
 The debug APK is `app\build\outputs\apk\debug\app-debug.apk`. A release APK is unsigned unless you configure signing in Android Studio or Gradle.
 
+### Build an APK in GitHub Actions
+
+Every push to `master` runs [`.github/workflows/android.yml`](.github/workflows/android.yml). When the workflow succeeds, open the repository's **Actions** tab, open the **Android APK** run, and download the `impactsphere-firetv-debug-apk` artifact. This is a debug APK for sideloading and device testing, not a signed Appstore release.
+
 ### 3. Install on a Fire TV device
 
 On the Fire TV, enable **ADB Debugging** and **Install unknown apps** under Developer Options. Find the device IP in network settings. Ensure the PC and TV are on the same network, then run (replace the sample IP):
